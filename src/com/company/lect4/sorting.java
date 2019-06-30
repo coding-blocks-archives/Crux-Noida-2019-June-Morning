@@ -31,6 +31,21 @@ public class sorting {
 
     public static void insertion(int ar[]){
 
+        for (int i = 0; i <ar.length-1 ; i++) {
+
+            for (int j = i+1; j>0 ; j--) {
+
+                if(ar[j]<ar[j-1]){
+                    swap.swapar(ar,j,j-1);
+                }
+
+                else{
+                    break;
+                }
+            }
+
+        }
+
     }
 
 
