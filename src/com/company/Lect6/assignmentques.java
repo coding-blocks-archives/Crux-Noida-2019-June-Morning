@@ -11,6 +11,9 @@ public class assignmentques {
         int n=s.nextInt();
         int precision=s.nextInt();
       float ans= root(n);
+      String h="Today is a nice day";
+      String ar[]=h.split("i");
+        System.out.println(Arrays.toString(ar));
 
       float inc= 0.1f;
 
@@ -22,7 +25,7 @@ public class assignmentques {
             ans=ans-inc;
             inc=inc/10;
         }
-
+//        System.out.println(ans);
         System.out.printf("%."+precision+"f",ans);
     }
 

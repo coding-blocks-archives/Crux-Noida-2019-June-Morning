@@ -3,13 +3,12 @@ package com.company.lect7;
 public class recursioneg {
 
     public static void main(String[] args) {
-           int ar[]={1,2,10,4,5,6};
+           int ar[]={1,2,4,5,6};
 //        pd(4);
 //        System.out.println(fact(4));
 //        System.out.println(fibo(4));
       //  System.out.println(sorted(ar,0));
-        System.out.println(linear(ar,0,101
-        ));
+        System.out.println(sorted(ar,0));
     }
 
     public static void pd(int n){
