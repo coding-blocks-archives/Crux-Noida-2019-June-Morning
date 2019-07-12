@@ -9,8 +9,10 @@ public class mazepath {
 
         ArrayList list=new ArrayList();
 //        listmazepath("",3,3,list);
-        System.out.println(list2mazepath("",3,3));
+        System.out.println(mazepathcount("",3,3));
 //        System.out.println(list);
+
+
     }
 
     public static void listmazepath(String processed,int row,int col,ArrayList list){
@@ -19,6 +21,7 @@ public class mazepath {
             list.add(processed);
             return;
         }
+        int cnt =0;
 
         if(row>1){
             listmazepath(processed+"V",row-1,col,list);
@@ -34,7 +37,7 @@ public class mazepath {
 
         if (row == 1 && col == 1) {
             System.out.println(processed);
-            return;
+           return ;
         }
 
         if (row > 1) {
@@ -44,6 +47,28 @@ public class mazepath {
         if (col > 1) {
             mazepath(processed + "H", row, col - 1);
         }
+
+    }
+
+    public static int cnt=0;
+
+    public static int mazepathcount(String processed,int row,int col) {
+
+        if (row == 1 && col == 1) {
+            //System.out.println(processed);
+            return 1 ;
+        }
+       int cnt=0;
+
+        if (row > 1) {
+            cnt+=mazepathcount(processed + "V", row - 1, col);
+        }
+
+        if (col > 1) {
+           cnt+= mazepathcount(processed + "H", row, col - 1);
+        }
+       return cnt;
+
     }
 
         public static ArrayList list2mazepath(String processed,int row,int col){
@@ -64,6 +89,7 @@ public class mazepath {
             }
             return list;
         }
+
 
     }
 
