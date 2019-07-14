@@ -7,7 +7,7 @@ public class child {
 
 
 
-        human shubham= new human();
+        Human shubham= new Human(20000);
         shubham.name="Shubham";
 
         System.out.println(shubham.name);
@@ -18,7 +18,7 @@ public class child {
         shubham.loan();
         shubham.loan();
 
-        human arvind =new human();
+        Human arvind =new Human();
         arvind.fest();
         arvind.name="Arvind";
         System.out.println(arvind.balance);
