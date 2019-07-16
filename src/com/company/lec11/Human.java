@@ -25,8 +25,8 @@ public class Human {
 //    }
 
     public Human(int balance){
-
         this(balance,"Anonymous");
+
     }
 
     public Human(int balance,String name){
@@ -52,6 +52,7 @@ public class Human {
 
         if(balance<100){
             System.out.println("nikal yahan se. dafa ho ja");
+            return;
         }
         System.out.println("bhook lagi he khaana do");
         balance=balance-200;
