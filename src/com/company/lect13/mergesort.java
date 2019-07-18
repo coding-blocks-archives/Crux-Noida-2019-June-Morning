@@ -1,4 +1,4 @@
-package com.company.lect;
+package com.company.lect13;
 
 import java.util.Arrays;
 
