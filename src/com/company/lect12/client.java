@@ -3,8 +3,8 @@ package com.company.lect12;
 public class client {
 
     public static void main(String[] args) {
-    Engine engine = new PetrolEngine();
-
+    Engine engine = new Engine();
+        engine.acc_speed=7;
         engine.start();
         engine.stop();
         engine.accelerate();

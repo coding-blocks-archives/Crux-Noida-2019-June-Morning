@@ -1,8 +1,8 @@
 package com.company.lect12;
 
-public abstract class Engine {
+public class Engine {
 
-    public int acc_speed=2;
+    int acc_speed=2;
      public void start(){
         System.out.println("I start as a generic engine");
     }
