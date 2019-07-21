@@ -1,4 +1,6 @@
-package com.company.lect15;
+package com.company.lec16;
+
+import com.company.lect15.LinkedList;
 
 public class lnClient {
 

@@ -1,4 +1,4 @@
-package com.company.lect15;
+package com.company.lec16;
 
 public class LinkedList {
 
@@ -146,7 +146,7 @@ public class LinkedList {
     }
 
 
-    public LinkedList merge(LinkedList first ,LinkedList second){
+    public LinkedList merge(LinkedList first , LinkedList second){
 
         Node firstnode=first.head;
         Node secondnode=second.head;
