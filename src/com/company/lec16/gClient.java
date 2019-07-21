@@ -9,6 +9,8 @@ public class gClient {
         Scanner s =new Scanner("1 true 2 true 3 false true 4 false false true 5 false false");
         Generictrees tree = new Generictrees();
         tree.populate(s);
-        tree.display();
+//        tree.display();
+        tree.postorder();
+//        tree.count();
     }
 }

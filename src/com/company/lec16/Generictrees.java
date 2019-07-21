@@ -44,6 +44,29 @@ public class Generictrees {
         }
     }
 
+    public void postorder(){
+        postorder(root);
+    }
+
+    private void postorder(Node node) {
+
+        for (int i = 0; i <node.children.size(); i++) {
+            postorder(node.children.get(i));
+        }
+        System.out.print(node.value+ " ");
+    }
+    public void count(){
+        System.out.println(count(root));
+
+    }
+
+    private int count(Node node) {
+        int cnt=1;
+        for (int i = 0; i <node.children.size(); i++) {
+            cnt +=count(node.children.get(i));
+        }
+        return cnt;
+    }
 
     private class Node{
         private int value;
