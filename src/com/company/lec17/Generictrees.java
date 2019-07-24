@@ -1,6 +1,8 @@
-package com.company.lec16;
+package com.company.lec17;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Generictrees {
@@ -31,6 +33,24 @@ public class Generictrees {
             }
         }
 
+    }
+
+    public void levelorder(){
+        levelorder(root);
+    }
+
+    private void levelorder(Node node) {
+        Queue<Node> queue= new LinkedList();
+        queue.add(node);
+        while(!queue.isEmpty()){
+            Node front = queue.remove();
+            System.out.print(front.value);
+            for (int i = 0; i <front.children.size() ; i++) {
+                Node child=front.children.get(i);
+                queue.add(child);
+
+            }
+        }
     }
 
     public void display(){

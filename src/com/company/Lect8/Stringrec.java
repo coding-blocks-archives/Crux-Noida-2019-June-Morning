@@ -3,7 +3,7 @@ package com.company.Lect8;
 public class Stringrec {
 
     public static void main(String[] args) {
-        permutation("","abc");
+       subsequence("","abcd");
 
     }
 
