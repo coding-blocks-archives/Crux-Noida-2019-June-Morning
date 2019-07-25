@@ -21,6 +21,7 @@ public class PetrolEngine extends Engine {
     public void start(){
         System.out.println("I start as petrol engine");
     }
+
     public void makeNoise(){
         System.out.println("hurr hurr");
     }
