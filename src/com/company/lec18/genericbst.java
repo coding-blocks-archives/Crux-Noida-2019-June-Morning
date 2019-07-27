@@ -45,7 +45,7 @@ public class genericbst <T extends Comparable<T>> {
     }
 
     public void successor(T target){
-        successor(find(root,target),root);
+        System.out.println(successor(find(root,target),root));
     }
 
     private T successor(Node node, Node root) {
@@ -96,6 +96,24 @@ if(node.value.compareTo(start)>0&&node.value.compareTo(end)<0)
         inrange(node.right,start,end);
     }
 
+    }
+
+    public void sort(T nums[]){
+       populateWithSorted(nums,0,nums.length-1);
+    }
+
+    private void populateWithSorted(T[] nums, int start, int end) {
+        if (start >= end){
+            return;
+        }
+
+        int mid = (start + end)/2;
+
+        this.populate(nums[mid]);
+
+        populateWithSorted(nums, start, mid);
+
+        populateWithSorted(nums, mid + 1, end);
     }
 
 
