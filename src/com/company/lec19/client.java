@@ -16,8 +16,8 @@ public class client {
         System.out.println(map.get("apple"));
 //        Integer i = new Integer(1);
 //        i.hashCode();
-//        map.remove("apple");
-//        System.out.println(map.get("apple"));
+        map.remove("apple");
+        System.out.println(map.get("apple"));
         System.out.println(map.get("mango"));
         System.out.println(map.get("orange"));
 //        System.out.println(map.toString());

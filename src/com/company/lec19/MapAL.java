@@ -6,6 +6,8 @@ import java.util.LinkedList;
 public class MapAL<K,V> {
 
     private ArrayList<LinkedList<Entity>> list;
+    private int size=0;
+    private float lf=0.5f;
 
     public MapAL() {
        list=new ArrayList<>();
@@ -25,7 +27,28 @@ public class MapAL<K,V> {
                 return;
             }
         }
+        if(((float)(size))/list.size()>lf){
+            rehash();
+        }
+
         entities.add(new Entity(key,value));
+        size++;
+    }
+
+    private void rehash() {
+        ArrayList<LinkedList<Entity>> old =list;
+        list= new ArrayList<>();
+
+        for (int i = 0; i <old.size()*2 ; i++) {
+            list.add(new LinkedList<>());
+        }
+        size=0;
+
+        for (LinkedList<Entity> entries:old) {
+            for (Entity entity:entries) {
+                put(entity.key,entity.value);
+            }
+        }
     }
 
     public V get(K key){
@@ -55,7 +78,9 @@ public class MapAL<K,V> {
                 target=entity;
             }
         }
+
         entities.remove(target);
+        size--;
     }
 
 
