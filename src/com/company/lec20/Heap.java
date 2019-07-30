@@ -34,9 +34,9 @@ public class Heap<T extends Comparable<T>>{
             throw new Exception("removing from empty list");
         }
         T temp= list.get(0);
-
-        if(list.size()>1) {
-            list.set(0, list.remove(list.size() - 1));
+        T last = list.remove(list.size() - 1);
+        if(!list.isEmpty()) {
+            list.set(0,last );
             downheap(0);
         }
         return temp;
